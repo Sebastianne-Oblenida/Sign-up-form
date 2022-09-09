@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------- */
+:root {
+    --dark: #202020;
+    --btn-color: #e62429;
+    --white: #fefefe;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-image: url('./images/bg.jpg');
+    height: 100vh;
+}
+
+body > img {
+    content: url('./images/marvels.webp');
+    display: none;
+}
+
+body, main, form, form > div, li, li div {
+    display: flex;
+}
+
+main, form, form > div, li div {
+    flex-direction: column;
+}
+
+main, form, form > div, li {
+    justify-content: center;
+}
+
+main, form {
+    align-items: center;
+}
+
+form, main, form > div {
+    width: 100%;
+}
+
+main > img {
+    width: 200px;
+}
+
+main {
+    height: 100%;
+}
+
+main > p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: var(--white);
+}
+
+form > div {
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: var(--white);
+    gap: 20px;
+}
+
+li {
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+label {
+    color: var(--dark);
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+input {
+    text-indent: 15px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline-color: blue;
+}
+
+.personalDetails:invalid {
+    outline-color: var(--btn-color);
+}
+
+.error {
+    border-color: var(--btn-color);
+}
+
+.personalDetails:valid {
+    outline-color: green;
+}
+
+.isMatchPassword {
+    color: var(--btn-color);
+    font-style: italic;
+    font-size: 0.8rem;
+    margin: 5px;
+    display: none;
+}
+
+button {
+    margin: 20px 0;
+    height: 50px;
+    width: 150px;
+    clip-path: polygon(15% 0, 100% 0, 100% 60%, 85% 100%, 0 100%, 0 40%);
+    font-weight: bold;
+    color: var(--white);
+    border-style: none;
+    background-color: var(--btn-color);
+    filter: drop-shadow(0 0 0.75rem crimson);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #c91c22;
+}
+
+form p {
+    color: var(--white)
+}
+
+form a {
+    color: var(--btn-color);
+    text-decoration: none;
+}
+
+@media (min-width: 1550px) {
+    body > img {
+        display: block;
+    }
+    main {
+        min-width: 438px;
+    }
+}
